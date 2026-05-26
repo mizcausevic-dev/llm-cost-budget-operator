@@ -1,0 +1,18 @@
+apiVersion: v2
+name: llm-cost-budget-operator
+description: Kubernetes operator that enforces declarative monthly USD budgets for LLM spend — evaluates an observed-cost ConfigMap against a limit and reports Warning/OverBudget posture.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+keywords:
+  - kubernetes
+  - operator
+  - finops
+  - llm
+  - cost
+  - governance
+home: https://suite.kineticgain.com
+sources:
+  - https://github.com/mizcausevic-dev/llm-cost-budget-operator
+maintainers:
+  - name: mizcausevic-dev

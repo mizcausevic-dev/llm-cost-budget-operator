@@ -1,0 +1,7 @@
+bin/
+manager
+*.exe
+*.out
+cover.out
+dist/
+.DS_Store

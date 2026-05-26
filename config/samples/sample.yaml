@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: llm-cost
+  namespace: default
+data:
+  # Written by an llm-cost-span-exporter pipeline (summary.totalCost).
+  total_usd: "842.50"
+---
+apiVersion: finops.kineticgain.com/v1alpha1
+kind: LLMCostBudget
+metadata:
+  name: team-platform-budget
+  namespace: default
+spec:
+  monthlyLimitUSD: "1000.00"
+  warnThresholdPercent: 80
+  costSource:
+    configMapName: llm-cost
+    key: total_usd
