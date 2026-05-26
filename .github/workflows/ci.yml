@@ -26,4 +26,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: azure/setup-helm@v4
-      - run: helm lint charts/governance-disclosure-operator
+      - run: helm lint charts/llm-cost-budget-operator
