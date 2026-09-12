@@ -2,7 +2,7 @@
 
 A Kubernetes operator that enforces **declarative monthly USD budgets for LLM spend**. You declare a `LLMCostBudget` — a limit and where to read accumulated spend; the operator evaluates it on every change and reports `UnderBudget` / `Warning` / `OverBudget`, raising Kubernetes events when a team blows past its ceiling.
 
-The FinOps control-plane of the [Kinetic Gain](https://suite.kineticgain.com) cloud-native lane. It pairs with [`llm-cost-span-exporter`](https://github.com/mizcausevic-dev/llm-cost-span-exporter): the exporter computes cost, a pipeline writes the running total to a ConfigMap, and this operator turns that number into an enforced budget with status and alerts.
+The FinOps control-plane for the GenAI cost lane. It pairs with [`llm-cost-span-exporter`](https://github.com/mizcausevic-dev/llm-cost-span-exporter): the exporter computes cost, a pipeline writes the running total to a ConfigMap, and this operator turns that number into an enforced budget with status and alerts.
 
 ## Why
 
